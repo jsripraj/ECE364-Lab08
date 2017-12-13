@@ -1,0 +1,9 @@
+def runNetworkCode(**kwargs):
+    if kwargs['osError']:
+        raise InterruptedError()
+    if kwargs['connectionError']:
+        raise ConnectionError
+    if kwargs['otherError']:
+        raise ValueError
+    if kwargs['noError']:
+        return True
